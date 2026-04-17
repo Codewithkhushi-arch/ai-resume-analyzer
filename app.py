@@ -14,7 +14,18 @@ import plotly.express as px# ===================================================
 # LOAD ENV & CONFIGURE GEMINI
 # ============================================================
 load_dotenv()
-client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+
+# Safely retrieve the API key whether locally or on Streamlit Cloud
+try:
+    api_key = st.secrets["GOOGLE_API_KEY"]
+except:
+    api_key = os.getenv("GOOGLE_API_KEY")
+
+if not api_key:
+    st.error("⚠️ GOOGLE_API_KEY is not set! Please configure it in Streamlit Cloud Secrets or your local .env file.")
+    st.stop()
+    
+client = genai.Client(api_key=api_key)
 
 # ============================================================
 # PAGE CONFIG
