@@ -2,6 +2,8 @@
 
 > Built a corporate-level resume screening system using Google Gemini AI + Streamlit.
 
+🚀 **Live Demo:** [ai-resume-analyzer-ay2v8gtau9kmcalrcznqba.streamlit.app](https://ai-resume-analyzer-ay2v8gtau9kmcalrcznqba.streamlit.app/)
+
 This AI-powered application analyzes resumes against job descriptions, providing an enterprise-grade applicant tracking evaluation. It takes a candidate's resume (PDF) and role requirements to accurately simulate an HR/Recruiter screening process for 13+ technical roles (Software Engineering, Data Science, DevOps, AI/ML, and more).
 
 ---
